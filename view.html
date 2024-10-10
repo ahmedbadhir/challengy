@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block title %}
+    View challenges
+{% endblock %}
+
+{% block main %}
+<body>
+    {% for challenge in challenges %}
+    <ul class="list-group">
+        <li class="list-group-item">{{ challenege.name }}: (Due: {{ challenge.deadline }})</li>
+        <div class="btn-group">
+            <a href="complete.html" class="btn btn-primary active" aria-current="page">Complete challenge</a>
+        </div>
+      </ul>
+    {% endfor %}
+</body>
+{% endblock %}

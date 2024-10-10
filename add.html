@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+
+{% block title %}
+    Add challenge
+{% endblock %}
+
+{% block main %}
+<body>
+    <h3>
+        <small class="text-body-secondary">Add a New challenge</small>
+    </h3>
+    <form action="/add" method="POST">
+        <div class="form-floating  mb-3">
+            <input autocomplete="off" autofocus class="form-control" name="challenge" id="floatingInput" type="text"  placeholder="Challenge" required>
+            <label for="floatingInput">Challenge</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input autocomplete="off" autofocus class="form-control" name="deadline" id="floatingInputValue" type="date" placeholder="Deadline" required>
+            <label for="floatingInput">Deadline</label>
+        </div>
+        <button class="btn btn-primary" type="submit">Add challenge</button>
+    </form>
+</body>
+{% endblock %}

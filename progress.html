@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+
+{% block title %}
+    Progress
+{% endblock %}
+
+{% block main %}
+<body>
+    <p>You've completed {{ progress }}% of your challenges!</p>
+    <a href="view.html" class="btn btn-primary active" aria-current="page">Back to challenges</a>
+</body>
+{% endblock %}
